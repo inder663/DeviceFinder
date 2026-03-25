@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Device Scanner</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#e7eefc;
+      --muted:#a9b6d3;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#33d6a6;
+      --warning:#ffcc66;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 18% 12%, rgba(124,92,255,.28), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(51,214,166,.18), transparent 55%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration: none}
+    a:hover{text-decoration: underline}
+    .wrap{max-width: 980px; margin: 0 auto; padding: 40px 18px 60px}
+    header{
+      padding: 26px 22px;
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.72);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing:.2px;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent2); box-shadow:0 0 0 5px rgba(51,214,166,.12)}
+    h1{
+      margin: 14px 0 8px;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+    }
+    .subtitle{color: var(--muted); margin: 0}
+    .meta{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.12);
+    }
+    nav{
+      margin-top: 18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    nav a{
+      border:1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--muted);
+      background: rgba(0,0,0,.10);
+    }
+    nav a:hover{color: var(--text); text-decoration:none; border-color: rgba(124,92,255,.6)}
+    section{
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.58);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 44px rgba(0,0,0,.30);
+    }
+    h2{margin: 0 0 10px; font-size: 20px; letter-spacing: -.2px}
+    h3{margin: 18px 0 8px; font-size: 16px; color: var(--text)}
+    p{margin: 10px 0; color: var(--text)}
+    ul{margin: 10px 0 0; padding-left: 18px; color: var(--text)}
+    li{margin: 8px 0}
+    .muted{color: var(--muted)}
+    .notice{
+      border-left: 4px solid var(--warning);
+      padding: 12px 14px;
+      background: rgba(255,204,102,.08);
+      border-radius: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr;}
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(0,0,0,.10);
+    }
+    .card b{color: var(--text)}
+    table{
+      width:100%;
+      border-collapse: collapse;
+      overflow:hidden;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      margin-top: 12px;
+    }
+    th, td{
+      text-align:left;
+      padding: 12px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th{color: var(--text); background: rgba(0,0,0,.20); font-weight: 650}
+    td{color: var(--muted)}
+    tr:last-child td{border-bottom: 0}
+    code, .mono{
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(0,0,0,.22);
+      border: 1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    footer{
+      margin-top: 18px;
+      padding: 18px 22px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.45);
+      border-radius: var(--radius);
+      text-align:center;
+    }
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 860px){
+      .two-col{grid-template-columns: 1.2fr .8fr;}
+    }
+    .highlight{
+      background: linear-gradient(90deg, rgba(124,92,255,.22), rgba(51,214,166,.14));
+      border: 1px solid rgba(124,92,255,.35);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .small{font-size: 13px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker"><span class="dot"></span> Privacy Policy</div>
+      <h1>Privacy Policy — Device Scanner</h1>
+      <p class="subtitle">This Privacy Policy explains how DevHook (“we”, “us”, or “our”) collects, uses, and shares information when you use the Device Scanner mobile application (the “App”).</p>
+      <div class="meta">
+        <div class="pill"><b>Controller:</b> DevHook</div>
+        <div class="pill"><b>Support:</b> <a href="mailto:devhookdeveloper@gmail.com">devhookdeveloper@gmail.com</a></div>
+        <div class="pill"><b>Effective date:</b> <span class="mono">[INSERT DATE]</span></div>
+      </div>
+      <nav aria-label="Table of contents">
+        <a href="#summary">Summary</a>
+        <a href="#data">Information We Collect</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#use">How We Use Information</a>
+        <a href="#sharing">Sharing</a>
+        <a href="#tracking">Tracking & Ads</a>
+        <a href="#choices">Your Choices</a>
+        <a href="#rights">Your Rights</a>
+        <a href="#security">Security</a>
+        <a href="#retention">Retention</a>
+        <a href="#children">Children</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="summary">
+      <h2>1) Quick Summary</h2>
+      <div class="two-col">
+        <div>
+          <p><b>Device Scanner</b> helps you identify devices on your Wi‑Fi network, discover nearby Bluetooth devices, and use camera-based color filters intended to help reveal infrared light sources.</p>
+          <div class="notice">
+            <b>Important:</b> The App is designed so that scan results and device lists are handled on your device. We do not intend to collect the list of devices you scan unless you explicitly share it with us (for example, by sending screenshots or logs to support).
+          </div>
+          <ul>
+            <li><b>We collect limited information</b> needed to operate the App, deliver subscriptions, prevent fraud, and improve performance.</li>
+            <li><b>We may use analytics</b> to understand how the App is used and fix issues.</li>
+            <li><b>We may use advertising identifiers</b> only where allowed and, on iOS, only when you grant permission (App Tracking Transparency).</li>
+            <li><b>You can opt out</b> of tracking permissions and control what you share.</li>
+          </ul>
+        </div>
+        <div class="highlight">
+          <h3 style="margin-top:0">At a glance</h3>
+          <div class="grid">
+            <div class="card"><b>Support email</b><br><span class="muted">devhookdeveloper@gmail.com</span></div>
+            <div class="card"><b>App features</b><br><span class="muted">Wi‑Fi scan • Bluetooth scan • Camera filter • History</span></div>
+            <div class="card"><b>On-device storage</b><br><span class="muted">Scan history may be stored locally</span></div>
+            <div class="card"><b>Subscriptions</b><br><span class="muted">Managed through the App Store</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="data">
+      <h2>2) Information We Collect</h2>
+      <p>We collect information from (a) you, (b) your device, and (c) third-party service providers you interact with through the App.</p>
+
+      <table aria-label="Information categories">
+        <thead>
+          <tr>
+            <th style="width:28%">Category</th>
+            <th style="width:44%">Examples</th>
+            <th style="width:28%">Why we collect it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Account & Contact (optional)</b></td>
+            <td>If you email support: your email address and the content you send us.</td>
+            <td>To respond to requests, troubleshoot issues, and provide support.</td>
+          </tr>
+          <tr>
+            <td><b>Purchase & Subscription</b></td>
+            <td>Subscription status, purchase receipts, product identifiers, and entitlement state.</td>
+            <td>To deliver paid features, process and restore purchases, and prevent fraud.</td>
+          </tr>
+          <tr>
+            <td><b>Device & App Diagnostics</b></td>
+            <td>Device model, OS version, app version, performance data, crash reports, timestamps.</td>
+            <td>To keep the App stable, debug problems, and improve performance.</td>
+          </tr>
+          <tr>
+            <td><b>Usage Analytics</b></td>
+            <td>How you navigate the App (e.g., screens viewed, taps, feature usage), session duration.</td>
+            <td>To understand what features are useful and improve user experience.</td>
+          </tr>
+          <tr>
+            <td><b>Identifiers (when permitted)</b></td>
+            <td>Advertising Identifier (IDFA) or other app/device identifiers.</td>
+            <td>To measure marketing performance and (where applicable) personalize/measure ads.</td>
+          </tr>
+          <tr>
+            <td><b>Scan Results & History</b></td>
+            <td>Devices discovered, names, IP/MAC-like identifiers, timestamps.</td>
+            <td>Primarily stored locally on your device to show results and history. Not intended to be uploaded by us.</td>
+          </tr>
+          <tr>
+            <td><b>Camera Input</b></td>
+            <td>Live camera feed.</td>
+            <td>Used only to display camera preview and apply on-screen color filters. We do not intend to record or upload your camera feed.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>What we do <u>not</u> intentionally collect</h3>
+      <ul>
+        <li>We do not require you to create an account.</li>
+        <li>We do not intentionally collect your photos, contacts, or personal files.</li>
+        <li>We do not intentionally record or upload your camera feed.</li>
+      </ul>
+
+      <div class="notice">
+        <b>Note:</b> No security tool can guarantee detection of all hidden devices or surveillance equipment. Results may vary depending on hardware, network conditions, and environment.
+      </div>
+    </section>
+
+    <section id="permissions">
+      <h2>3) Permissions the App May Request</h2>
+      <p>The App may request access to certain device permissions to provide core functionality. You can change permissions at any time in your device settings.</p>
+
+      <div class="grid">
+        <div class="card">
+          <b>Camera</b>
+          <p class="muted">Used to show a live preview and apply visual filters intended to help reveal infrared light sources.</p>
+        </div>
+        <div class="card">
+          <b>Bluetooth</b>
+          <p class="muted">Used to discover and list nearby Bluetooth devices where supported by your OS.</p>
+        </div>
+        <div class="card">
+          <b>Location (may be required by OS)</b>
+          <p class="muted">Some platforms may require location permission to perform Bluetooth scanning. We do not use location to track your precise position unless you grant it and your OS requires it for scanning.</p>
+        </div>
+        <div class="card">
+          <b>Tracking (iOS App Tracking Transparency)</b>
+          <p class="muted">If presented, you can allow or deny tracking. If denied, we will not access the Advertising Identifier (IDFA) for tracking purposes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="use">
+      <h2>4) How We Use Information</h2>
+      <ul>
+        <li><b>Provide and operate the App</b> (scan features, history display, and settings).</li>
+        <li><b>Enable subscriptions</b> and confirm entitlements (e.g., premium access).</li>
+        <li><b>Improve reliability</b> through diagnostics, crash reporting, and performance monitoring.</li>
+        <li><b>Understand usage</b> via analytics so we can improve features and design.</li>
+        <li><b>Marketing measurement</b> (where permitted) to understand which campaigns lead to installs or subscriptions.</li>
+        <li><b>Security and fraud prevention</b> to protect users and our service.</li>
+      </ul>
+    </section>
+
+    <section id="sharing">
+      <h2>5) When We Share Information</h2>
+      <p>We do not sell your personal information. We may share limited information with trusted providers to operate the App and comply with law.</p>
+
+      <h3>Service providers</h3>
+      <p class="muted">Depending on your usage and settings, we may share information with:</p>
+      <ul>
+        <li><b>RevenueCat</b> (subscriptions and purchase management): to validate purchases and manage entitlements.</li>
+        <li><b>AppsFlyer</b> (analytics/attribution): to measure installs and subscription performance and improve marketing effectiveness.</li>
+        <li><b>Apple</b> (App Store & device services): purchases, payments, reviews, and platform features.</li>
+      </ul>
+
+      <h3>Legal and safety</h3>
+      <ul>
+        <li>To comply with applicable laws, regulations, or legal processes.</li>
+        <li>To protect rights, safety, and security of DevHook, users, or the public.</li>
+        <li>To investigate or prevent suspected fraud, abuse, or security incidents.</li>
+      </ul>
+
+      <h3>Business transfers</h3>
+      <p class="muted">If we are involved in a merger, acquisition, or asset sale, information may be transferred as part of that transaction, subject to applicable law.</p>
+    </section>
+
+    <section id="tracking">
+      <h2>6) Tracking, Advertising & Analytics</h2>
+      <p>The App may use analytics and attribution tools to understand usage and measure marketing performance.</p>
+
+      <h3>iOS App Tracking Transparency (ATT)</h3>
+      <p class="muted">On iOS, you may be asked to allow tracking. If you decline, we will not access the Advertising Identifier (IDFA) for tracking across apps and websites.</p>
+
+      <h3>Advertising Identifier (IDFA) and attribution</h3>
+      <ul>
+        <li>When permitted, the IDFA may be used for attribution and marketing measurement.</li>
+        <li>We aim to minimize the data shared and use it only for the purposes described in this policy.</li>
+      </ul>
+
+      <div class="notice">
+        <b>Tip:</b> You can manage tracking permissions in iOS Settings → Privacy & Security → Tracking.
+      </div>
+    </section>
+
+    <section id="choices">
+      <h2>7) Your Choices & Controls</h2>
+      <ul>
+        <li><b>Permissions:</b> You can allow/deny Camera, Bluetooth, Location, and Tracking permissions in your device settings.</li>
+        <li><b>Subscription:</b> You can manage or cancel subscriptions in your Apple ID subscription settings.</li>
+        <li><b>Delete local data:</b> Scan history may be stored on your device. You can remove it by clearing the App’s data (where available) or uninstalling the App.</li>
+        <li><b>Support requests:</b> You can choose what information to share when contacting support.</li>
+      </ul>
+    </section>
+
+    <section id="rights">
+      <h2>8) Your Privacy Rights</h2>
+      <p>Your rights depend on where you live. You may have the right to:</p>
+      <ul>
+        <li>Request access to personal information we hold about you.</li>
+        <li>Request correction or deletion of certain personal information.</li>
+        <li>Object to or restrict certain processing.</li>
+        <li>Withdraw consent where processing is based on consent (e.g., tracking permission).</li>
+      </ul>
+      <p class="muted">To exercise these rights, contact us at <a href="mailto:devhookdeveloper@gmail.com">devhookdeveloper@gmail.com</a>. We may need to verify your request.</p>
+
+      <h3>California Notice (CPRA)</h3>
+      <p class="muted">
+        We do not sell personal information. We may share limited identifiers and analytics data with service providers for business purposes such as analytics and attribution, subject to your device privacy settings and applicable law.
+      </p>
+    </section>
+
+    <section id="security">
+      <h2>9) Security</h2>
+      <p>We use reasonable administrative, technical, and organizational safeguards designed to protect information. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.</p>
+    </section>
+
+    <section id="retention">
+      <h2>10) Data Retention</h2>
+      <ul>
+        <li><b>Local scan history:</b> stored on your device and retained until you delete it or uninstall the App.</li>
+        <li><b>Support emails:</b> retained as needed to respond and maintain support records.</li>
+        <li><b>Subscription records:</b> retained as required for entitlement management, accounting, and legal compliance.</li>
+        <li><b>Analytics/diagnostics:</b> retained for a reasonable period to improve stability and performance.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2>11) Children’s Privacy</h2>
+      <p>The App is not directed to children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child provided us personal information, contact us and we will take appropriate steps to delete it.</p>
+    </section>
+
+    <section id="changes">
+      <h2>12) Changes to This Policy</h2>
+      <p class="muted">We may update this Privacy Policy from time to time. We will revise the “Effective date” above and may provide additional notice where required by law.</p>
+    </section>
+
+    <section id="contact">
+      <h2>13) Contact Us</h2>
+      <p>If you have questions, requests, or concerns about this Privacy Policy or the App’s privacy practices, contact:</p>
+      <p>
+        <b>DevHook</b><br />
+        Email: <a href="mailto:devhookdeveloper@gmail.com">devhookdeveloper@gmail.com</a>
+      </p>
+      <p class="notice small">
+        <b>Disclaimer:</b> This document is provided for general informational purposes and does not constitute legal advice. Consider consulting a qualified attorney to ensure compliance with applicable laws for your business and region.
+      </p>
+    </section>
+
+    <footer>
+      <div class="small">© <span class="mono">2026</span> DevHook. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>
