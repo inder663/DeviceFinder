@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use — Device Scanner</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#e7eefc;
+      --muted:#a9b6d3;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#33d6a6;
+      --warning:#ffcc66;
+      --danger:#ff6b6b;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 18% 12%, rgba(124,92,255,.28), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(51,214,166,.18), transparent 55%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration: none}
+    a:hover{text-decoration: underline}
+    .wrap{max-width: 980px; margin: 0 auto; padding: 40px 18px 60px}
+    header{
+      padding: 26px 22px;
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.72);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing:.2px;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent); box-shadow:0 0 0 5px rgba(124,92,255,.12)}
+    h1{
+      margin: 14px 0 8px;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+    }
+    .subtitle{color: var(--muted); margin: 0}
+    .meta{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.12);
+    }
+    nav{
+      margin-top: 18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    nav a{
+      border:1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--muted);
+      background: rgba(0,0,0,.10);
+    }
+    nav a:hover{color: var(--text); text-decoration:none; border-color: rgba(124,92,255,.6)}
+    section{
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.58);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 44px rgba(0,0,0,.30);
+    }
+    h2{margin: 0 0 10px; font-size: 20px; letter-spacing: -.2px}
+    h3{margin: 18px 0 8px; font-size: 16px; color: var(--text)}
+    p{margin: 10px 0; color: var(--text)}
+    ul{margin: 10px 0 0; padding-left: 18px; color: var(--text)}
+    li{margin: 8px 0}
+    .muted{color: var(--muted)}
+    .notice{
+      border-left: 4px solid var(--warning);
+      padding: 12px 14px;
+      background: rgba(255,204,102,.08);
+      border-radius: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .danger{
+      border-left: 4px solid var(--danger);
+      padding: 12px 14px;
+      background: rgba(255,107,107,.10);
+      border-radius: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr;}
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(0,0,0,.10);
+    }
+    .card b{color: var(--text)}
+    code, .mono{
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(0,0,0,.22);
+      border: 1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    footer{
+      margin-top: 18px;
+      padding: 18px 22px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.45);
+      border-radius: var(--radius);
+      text-align:center;
+    }
+    .small{font-size: 13px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker"><span class="dot"></span> Terms of Use</div>
+      <h1>Terms of Use — Device Scanner</h1>
+      <p class="subtitle">
+        These Terms of Use (“Terms”) govern your access to and use of the Device Scanner mobile application (the “App”).
+        By downloading, installing, or using the App, you agree to these Terms.
+      </p>
+
+      <div class="meta">
+        <div class="pill"><b>Provider:</b> DevHook</div>
+        <div class="pill"><b>Support:</b> <a href="mailto:devhookdeveloper@gmail.com">devhookdeveloper@gmail.com</a></div>
+        <div class="pill"><b>Effective date:</b> <span class="mono">[INSERT DATE]</span></div>
+      </div>
+
+      <nav aria-label="Table of contents">
+        <a href="#overview">Overview</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#license">License</a>
+        <a href="#acceptable">Acceptable Use</a>
+        <a href="#features">Feature Disclaimers</a>
+        <a href="#subscriptions">Subscriptions</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#ip">Intellectual Property</a>
+        <a href="#liability">Limitations</a>
+        <a href="#termination">Termination</a>
+        <a href="#law">Governing Law</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="overview">
+      <h2>1) Overview</h2>
+      <p>
+        Device Scanner is intended to help you:
+      </p>
+      <ul>
+        <li>Scan and list devices on your Wi‑Fi network (where supported).</li>
+        <li>Discover nearby Bluetooth devices (where supported by your OS and permissions).</li>
+        <li>Use a live camera view with color filters intended to help reveal infrared light sources.</li>
+        <li>View a history of detected devices (stored locally on your device, where available).</li>
+      </ul>
+      <div class="notice">
+        The App is an informational tool and does not guarantee detection of all devices, surveillance tools, or hidden cameras.
+        Results may vary by device hardware, OS restrictions, permissions, and environmental conditions.
+      </div>
+    </section>
+
+    <section id="eligibility">
+      <h2>2) Eligibility</h2>
+      <p>
+        You must be legally capable of entering into these Terms. If you are using the App on behalf of an organization,
+        you represent that you have authority to bind that organization to these Terms.
+      </p>
+    </section>
+
+    <section id="license">
+      <h2>3) License and Restrictions</h2>
+      <p>
+        Subject to your compliance with these Terms, DevHook grants you a limited, non-exclusive, non-transferable,
+        revocable license to download and use the App for your personal or internal business use on compatible devices.
+      </p>
+      <h3>You may not</h3>
+      <ul>
+        <li>Copy, modify, reverse engineer, decompile, or attempt to extract the source code of the App except where permitted by law.</li>
+        <li>Rent, lease, sell, sublicense, or distribute the App.</li>
+        <li>Use the App to violate any applicable laws, regulations, or third‑party rights.</li>
+        <li>Use the App to attempt unauthorized access to networks, devices, or accounts.</li>
+      </ul>
+    </section>
+
+    <section id="acceptable">
+      <h2>4) Acceptable Use Policy</h2>
+      <p>You agree to use the App responsibly and lawfully.</p>
+      <div class="danger">
+        <b>Prohibited use:</b> Using the App for hacking, unauthorized monitoring, stalking, harassment, or any unlawful surveillance is strictly prohibited.
+      </div>
+      <ul>
+        <li>Only scan networks and devices you own or have explicit permission to scan.</li>
+        <li>Comply with local laws regarding privacy, surveillance, Bluetooth usage, and network security.</li>
+        <li>Do not attempt to bypass device security, access controls, or restrictions.</li>
+      </ul>
+    </section>
+
+    <section id="features">
+      <h2>5) Feature Disclaimers (No Guarantee)</h2>
+      <p>
+        The App provides indications and informational outputs that may help you evaluate your environment.
+        However, we do not guarantee:
+      </p>
+      <ul>
+        <li>That every device on a network will be detected or displayed.</li>
+        <li>That every Bluetooth device nearby will be discovered.</li>
+        <li>That the camera filter feature will detect or prove the presence of a hidden camera.</li>
+        <li>That scan results are complete, accurate, or up to date.</li>
+      </ul>
+      <p class="muted">
+        The App’s results can be affected by router behavior, OS limitations, permissions, hardware differences, and interference.
+      </p>
+    </section>
+
+    <section id="subscriptions">
+      <h2>6) Subscriptions, Purchases, and Billing</h2>
+      <p>
+        The App may offer paid subscriptions or in‑app purchases (“Paid Features”). Paid Features are processed by the Apple App Store.
+      </p>
+
+      <h3>Billing terms</h3>
+      <ul>
+        <li>Pricing, billing period, and renewal terms are shown at the time of purchase.</li>
+        <li>Subscriptions typically renew automatically unless canceled at least 24 hours before the end of the current period.</li>
+        <li>Your Apple account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+        <li>You can manage or cancel subscriptions in your Apple ID subscription settings.</li>
+      </ul>
+
+      <h3>Restoring purchases</h3>
+      <p class="muted">
+        If available, you can use the “Restore Purchases” function to restore eligible purchases on the same Apple ID.
+      </p>
+
+      <h3>Refunds</h3>
+      <p class="muted">
+        Refund requests are handled by Apple and subject to Apple’s policies. We cannot directly issue refunds for App Store purchases.
+      </p>
+
+      <div class="notice">
+        DevHook may change the availability of features, subscription offerings, or pricing (as permitted by App Store policies and applicable law).
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>7) Privacy</h2>
+      <p>
+        Your privacy matters. Our Privacy Policy explains how we handle data, permissions, and third‑party services.
+        Please review it carefully as it is part of these Terms.
+      </p>
+      <p class="muted">
+        If there is a conflict between these Terms and the Privacy Policy regarding data handling, the Privacy Policy will control.
+      </p>
+    </section>
+
+    <section id="ip">
+      <h2>8) Intellectual Property</h2>
+      <p>
+        The App, including all software, designs, text, graphics, and trademarks, is owned by DevHook or its licensors and
+        is protected by intellectual property laws. You do not acquire any ownership rights by using the App.
+      </p>
+      <p class="muted">
+        Apple and the App Store are trademarks of Apple Inc. Any third‑party names or marks are the property of their respective owners.
+      </p>
+    </section>
+
+    <section id="liability">
+      <h2>9) Disclaimers and Limitations of Liability</h2>
+      <h3>Disclaimer of warranties</h3>
+      <p>
+        The App is provided on an “AS IS” and “AS AVAILABLE” basis. To the maximum extent permitted by law,
+        DevHook disclaims all warranties of any kind, express or implied, including warranties of merchantability,
+        fitness for a particular purpose, and non‑infringement.
+      </p>
+
+      <h3>Limitation of liability</h3>
+      <p>
+        To the maximum extent permitted by law, DevHook will not be liable for any indirect, incidental, special,
+        consequential, or punitive damages, including loss of profits, data, goodwill, or business interruption,
+        arising out of or relating to your use of (or inability to use) the App.
+      </p>
+
+      <p class="muted">
+        In jurisdictions where limitations are not allowed, liability will be limited to the minimum extent permitted by law.
+      </p>
+    </section>
+
+    <section id="termination">
+      <h2>10) Termination</h2>
+      <p>
+        We may suspend or terminate access to the App if you violate these Terms, misuse the App, or if required by law.
+        You may stop using the App at any time by uninstalling it.
+      </p>
+      <p class="muted">
+        Sections intended to survive termination (including Intellectual Property, Disclaimers, and Limitation of Liability) will survive.
+      </p>
+    </section>
+
+    <section id="law">
+      <h2>11) Governing Law and Dispute Resolution</h2>
+      <p class="muted">
+        These Terms are governed by the laws applicable in your jurisdiction, unless otherwise required by law.
+        Any disputes should be resolved in accordance with applicable consumer protection rules.
+      </p>
+      <div class="notice small">
+        <b>Note:</b> If you want a specific governing law and venue clause (e.g., a specific country/state), insert it here based on your legal advice.
+      </div>
+    </section>
+
+    <section id="changes">
+      <h2>12) Changes to These Terms</h2>
+      <p class="muted">
+        We may update these Terms from time to time. We will revise the “Effective date” above and may provide additional notice
+        where required by law. Your continued use of the App after changes become effective means you accept the updated Terms.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>13) Contact</h2>
+      <p>If you have questions about these Terms, contact:</p>
+      <p>
+        <b>DevHook</b><br />
+        Email: <a href="mailto:devhookdeveloper@gmail.com">devhookdeveloper@gmail.com</a>
+      </p>
+      <p class="notice small">
+        <b>Disclaimer:</b> This document is provided for general informational purposes and does not constitute legal advice.
+        Consider consulting a qualified attorney to ensure compliance with applicable laws for your region and business.
+      </p>
+    </section>
+
+    <footer>
+      <div class="small">© <span class="mono">2026</span> DevHook. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>
