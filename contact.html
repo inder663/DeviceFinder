@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Device Scanner</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#e7eefc;
+      --muted:#a9b6d3;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#33d6a6;
+      --warning:#ffcc66;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 18% 12%, rgba(124,92,255,.28), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(51,214,166,.18), transparent 55%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration: none}
+    a:hover{text-decoration: underline}
+    .wrap{max-width: 980px; margin: 0 auto; padding: 40px 18px 60px}
+    header{
+      padding: 26px 22px;
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.72);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing:.2px;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent2); box-shadow:0 0 0 5px rgba(51,214,166,.12)}
+    h1{
+      margin: 14px 0 8px;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+    }
+    .subtitle{color: var(--muted); margin: 0}
+    .meta{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.12);
+    }
+    section{
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.58);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 44px rgba(0,0,0,.30);
+    }
+    h2{margin: 0 0 10px; font-size: 20px; letter-spacing: -.2px}
+    h3{margin: 18px 0 8px; font-size: 16px; color: var(--text)}
+    p{margin: 10px 0; color: var(--text)}
+    ul{margin: 10px 0 0; padding-left: 18px; color: var(--text)}
+    li{margin: 8px 0}
+    .muted{color: var(--muted)}
+    .notice{
+      border-left: 4px solid var(--warning);
+      padding: 12px 14px;
+      background: rgba(255,204,102,.08);
+      border-radius: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr;}
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(0,0,0,.10);
+    }
+    .card b{color: var(--text)}
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(124,92,255,.45);
+      background: linear-gradient(90deg, rgba(124,92,255,.25), rgba(51,214,166,.12));
+      color: var(--text);
+      text-decoration:none;
+      font-weight: 650;
+    }
+    .btn:hover{border-color: rgba(124,92,255,.75); text-decoration:none}
+    code, .mono{
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(0,0,0,.22);
+      border: 1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    footer{
+      margin-top: 18px;
+      padding: 18px 22px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(15,26,46,.45);
+      border-radius: var(--radius);
+      text-align:center;
+    }
+    .small{font-size: 13px}
+    label{
+      display:block;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 10px 0 6px;
+    }
+    input, textarea, select{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      outline: none;
+    }
+    textarea{min-height: 130px; resize: vertical}
+    .row{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 860px){
+      .row{grid-template-columns: 1fr 1fr;}
+    }
+    .actions{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+    .ghost{
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.10);
+      color: var(--muted);
+      border-radius: 14px;
+      padding: 12px 14px;
+      text-decoration:none;
+      font-weight: 650;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker"><span class="dot"></span> Contact Us</div>
+      <h1>Contact DevHook</h1>
+      <p class="subtitle">
+        Need help with Device Scanner? We’re here to assist. Use the details below or email us directly for support, feedback, or business inquiries.
+      </p>
+      <div class="meta">
+        <div class="pill"><b>Support email:</b> <a href="mailto:devhookdeveloper@gmail.com">devhookdeveloper@gmail.com</a></div>
+        <div class="pill"><b>Typical response:</b> 1–3 business days</div>
+        <div class="pill"><b>App:</b> Device Scanner</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>1) Fastest way to reach us</h2>
+      <div class="grid">
+        <div class="card">
+          <b>Email Support</b>
+          <p class="muted">For issues, billing questions, feature requests, or feedback.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:devhookdeveloper@gmail.com?subject=Device%20Scanner%20Support%20Request&body=Hello%20DevHook%20Support%2C%0A%0AApp%20Version%3A%20%0ADevice%20Model%3A%20%0AiOS%20Version%3A%20%0A%0ADescribe%20your%20issue%20here%3A%0A">
+              Email Support
+            </a>
+            <span class="muted small">devhookdeveloper@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <b>What to include</b>
+          <p class="muted">To help us resolve your request faster, include:</p>
+          <ul>
+            <li>App version</li>
+            <li>Device model and iOS version</li>
+            <li>What you expected vs. what happened</li>
+            <li>Screenshots (optional)</li>
+            <li>Subscription status (if relevant)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="notice">
+        <b>Privacy note:</b> Please avoid sending sensitive personal data. If you share screenshots of scan results, they may include device names or network identifiers.
+      </div>
+    </section>
+
+    <section>
+      <h2>2) Copy‑and‑paste support template</h2>
+      <p class="muted">Paste this into your email for faster troubleshooting:</p>
+      <div class="card">
+        <p class="mono">
+          Subject: Device Scanner — Support Request<br><br>
+          Hello DevHook Support,<br><br>
+          App Version: [e.g., 1.0.0]<br>
+          Device Model: [e.g., iPhone 15]<br>
+          iOS Version: [e.g., iOS 17.5]<br>
+          Subscription: [Active / Not active / Unsure]<br><br>
+          Feature: [Wi‑Fi Scan / Bluetooth Scan / Camera Detector / History / Settings / Other]<br>
+          Issue Description:<br>
+          [Write details here]<br><br>
+          Steps to Reproduce:<br>
+          1) ...<br>
+          2) ...<br>
+          3) ...<br><br>
+          Expected Result:<br>
+          ...<br><br>
+          Actual Result:<br>
+          ...<br><br>
+          Thanks!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) Optional web form (static example)</h2>
+      <p class="muted">
+        If you host this page on your website, you can connect the form to your own backend (this HTML is static and does not submit anywhere by default).
+      </p>
+
+      <form onsubmit="event.preventDefault(); alert('This is a static demo. Connect it to your backend to receive messages.');">
+        <div class="row">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" placeholder="Name" autocomplete="name" />
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option>General question</option>
+              <option>Bug report</option>
+              <option>Billing / Subscription</option>
+              <option>Feature request</option>
+              <option>Privacy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="platform">Platform</label>
+            <select id="platform" name="platform">
+              <option>iOS</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Describe your request in detail..."></textarea>
+
+        <div class="actions">
+          <button class="btn" type="submit">Submit (Demo)</button>
+          <a class="ghost" href="mailto:devhookdeveloper@gmail.com?subject=Device%20Scanner%20Contact">Prefer email</a>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="small">© <span class="mono">2026</span> DevHook. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>
